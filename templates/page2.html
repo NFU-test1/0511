@@ -1,7 +1,8 @@
-
-{{ id }}
-{{ ps }}
-
+{% extends 'layout/back.html' %} 
+    {% block main %}
+        {{ id }}
+        {{ ps }}
+    {% endblock main %}
 {% if type %}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>

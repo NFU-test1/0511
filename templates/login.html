@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'layout/layout.html' %}
 
 {% block title %} Login {% endblock %}
 
@@ -30,7 +30,7 @@
 
               <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
               <p class="text-white-50 mb-5">Please enter your login and password!</p>
-              <form action="/login" method="post" onsubmit="return checksubmit();">
+              <form action="/login" method="post" onsubmit="return CheckSubmit();">
                 <div class="form-outline form-white mb-4">
                   <input id="account" class="form-control form-control-lg" name="account" />
                   <label class="form-label" for="account">Email</label>
@@ -67,24 +67,24 @@
 
 
 <script>
-  function checksubmit() {
+  function CheckSubmit(){
     let account = document.getElementById('account').value.length;
-    let password =  document.getElementById('password').value.length;
-    if (account == 0 && password == 0) {
+    let password = document.getElementById('password').value.length;
+    if (account == 0 && password == 0 ){
       alert('請輸入資料');
       return false
     }
     else if(account == 0){
-      alert('帳號未輸入');
+      alert('請輸入帳號');
       return false
     }
     else if(password == 0){
-      alert('密碼未輸入');
+      alert('請輸入密碼');
       return false
     }
-    else {
+    else{
       return true
-    };
+    }
   }
 </script>
 
