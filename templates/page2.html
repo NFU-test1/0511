@@ -1,17 +1,14 @@
 {% extends 'layout/back.html' %} 
     {% block main %}
+    <h1 class="mt-4">Page2</h1>
         {{ id }}
         {{ ps }}
-    {% endblock main %}
+    
 {% if type %}
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-            Swal.fire(
-            '{{ type }}',
-            '登入成功',
-            'success'
-            )
+        Success('{{type}}','登入成功');
     </script>
     
 {% endif %}
 
+{% endblock main %}

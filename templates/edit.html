@@ -1,0 +1,42 @@
+{% extends 'layout/back.html' %} 
+    {% block main %}
+    <h1 class="mt-4">修改使用者</h1>
+    <form action="/edit/{{ data.id }}" method="post" onsubmit="return CheckSubmit();">
+    <table style="width: 1000px;">
+        <tr style="height: 60px;">
+            <td>
+                <h5><label class="form-label" for="username">使用者名稱</label></h5>
+            </td>
+            <td>
+                <input id="username" class="form-control " name="username" style="width:500px" value="{{ data.name }}"/>
+            </td>
+        </tr>
+        <tr style="height: 60px;">
+            <td>
+                <h5><label class="form-label" for="account">使用者帳號</label></h5>
+            </td>
+            <td>
+                <input id="account" class="form-control " name="account" style="width:500px" value="{{ data.account }}"/>
+            </td>
+        </tr>
+        <tr style="height: 60px;">
+            <td>
+                <h5><label class="form-label" for="password">使用者密碼</label></h5>
+            </td>
+            <td>
+                <input id="password" class="form-control " name="password" type="password" style="width:500px" value="{{ data.password }}"/>
+            </td>
+        </tr>
+    </table>
+    <div style="width: 725px;" align="center">
+        <a type="button" class="btn btn-outline-secondary" href="/users">返回</a>
+        <button type="submit" class="btn btn-primary">送出修改</button>
+    </div>
+</form>
+        
+        
+        
+        
+    
+    
+{% endblock main %}
